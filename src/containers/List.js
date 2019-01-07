@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {doRequest} from '../actionCreators/actionCreators';
+// import {doRequest} from '../actionCreators/actionCreators';
 import styled from 'styled-components';
 import ListItem from '../presentational/ListItem';
 import {Button} from 'antd';

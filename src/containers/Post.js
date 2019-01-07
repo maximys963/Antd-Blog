@@ -1,14 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import styled from 'styled-components';
-import { Card, Input, Button } from 'antd';
+import { Card, Button } from 'antd';
 import CommentContainer from '../presentational/Comment';
 import CommentInput from '../presentational/CommentInput';
 import {postComment, dispatchPosition} from '../actionCreators/actionCreators';
-import {postsSelector} from '../selectors/Selectors';
+// import {postsSelector} from '../selectors/Selectors';
 
-
-const { TextArea } = Input;
 
 const Contatiner = styled.div`
   display: flex;

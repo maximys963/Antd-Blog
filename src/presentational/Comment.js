@@ -1,5 +1,5 @@
 import React from 'react';
-import {Comment, Icon, Tooltip, Avatar} from 'antd';
+import {Comment, Tooltip, Avatar} from 'antd';
 import moment from 'moment';
 
 

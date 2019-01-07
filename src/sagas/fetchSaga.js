@@ -1,10 +1,9 @@
 import axios from 'axios';
-import {takeEvery, takeLatest, all, put, call, take } from 'redux-saga/effects'
+import {takeEvery, takeLatest, all, put, call, } from 'redux-saga/effects'
 import {
     DO_REQUEST,
     START_REQUEST,
     START_ADDING_COMMENT,
-    ADD_COMMENT
 } from "../actions/actions";
 
 

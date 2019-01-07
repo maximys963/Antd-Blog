@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import { Input, Button } from 'antd';
 import styled from 'styled-components'
-import {connect} from 'react-redux';
-import {START_ADDING_COMMENT} from '../actions/actions';
-import {postComment} from '../actionCreators/actionCreators';
 
 
 const {TextArea} = Input;
