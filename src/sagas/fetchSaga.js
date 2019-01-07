@@ -13,11 +13,10 @@ function getPosts() {
 
 function* fetchData() {
     const response = yield call(getPosts);
-    // const json = yield response.json();
     console.log(response.data);
     yield put({
         type: DO_REQUEST,
-        payload: response
+        payload: response.data
     })
 }
 

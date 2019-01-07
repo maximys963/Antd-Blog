@@ -6,7 +6,7 @@ switch (action.type){
     case DO_REQUEST :
         return{
             ...state,
-            data: action.payload
+            db: action.payload
         };
     default : return state
 }

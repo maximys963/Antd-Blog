@@ -1,21 +1,36 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {doRequest} from "../actionCreators/actionCreators";
-import { Collapse } from 'antd';
+import styled from 'styled-components';
+import ListItem from '../presentational/ListItem'
 
-const Panel = Collapse.Panel;
+const Container = styled.div`
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ 
+`;
 
-function callback(key) {
-    console.log(key);
-}
 
 
 class List extends Component{
+    constructor(){
+        super()
+    }
     render(){
         return(
-            <div>
-                <button style={{ width: '160px'}} onClick={ () => this.props.clicked()}>Simple button</button>
-            </div>
+            <Container>
+                {
+                    this.props.postData !== undefined
+                    ? this.props.postData.posts.map( (elem) =>(
+                            <ListItem text={elem.title} key={elem.id} id={elem.id} onClick={()=>{console.log("hello")} }/>
+                        ))
+                    : "wait please ..."
+
+                }
+            </Container>
         )
     }
 }
@@ -25,7 +40,7 @@ const mapDispatchToProps = (dispatch) => ({  clicked: () =>
 });
 
 const mapStateToProps = (state) =>({
-    animes: state.data
+    postData: state.db
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(List);
