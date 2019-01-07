@@ -1,2 +1,5 @@
 
 export const DO_REQUEST = "DO_REQUEST";
+export const START_REQUEST = "START_REQUEST";
+export const START_ADDING_COMMENT = "START_ADDING_COMMENT";
+export const ADD_COMMENT = "ADD_COMMENT";

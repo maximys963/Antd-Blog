@@ -11,7 +11,7 @@ import App from './App';
 import List from './containers/List'
 import * as serviceWorker from './serviceWorker';
 import Post from './containers/Post'
-import {DO_REQUEST} from "./actions/actions";
+import {START_REQUEST} from "./actions/actions";
 
 const initialState = {};
 
@@ -31,7 +31,7 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga);
 
-store.dispatch({type: 'START_REQUEST'});
+store.dispatch({type: START_REQUEST});
 
 const Root = ({store}) => (
     <Provider store={store} >

@@ -32,14 +32,12 @@ class List extends Component{
     }
 }
 
-const mapDispatchToProps = (dispatch) => ({  clicked: () =>
-    { dispatch(doRequest()) }
-});
+
 
 const mapStateToProps = (state) =>({
     postData: state.db
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(List);
+export default connect(mapStateToProps)(List);
 
 
