@@ -15,23 +15,6 @@ class List extends Component{
         return(
             <div>
                 <button style={{ width: '160px'}} onClick={ () => this.props.clicked()}>Simple button</button>
-                <Collapse defaultActiveKey={['1']} onChange={callback}>
-                    { this.props.animes !== undefined
-                        ?this.props.animes.map( (elem, i) => (
-                            <Panel header={elem.title} key={i}>
-                                <p>{elem.description}</p>
-                            </Panel>
-                         ))
-                         : null
-
-                    }
-
-
-
-
-
-
-                </Collapse>
             </div>
         )
     }

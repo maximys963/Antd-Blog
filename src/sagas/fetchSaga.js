@@ -1,15 +1,23 @@
-import fetch from 'isomorphic-fetch';
-import {takeEvery, all, put } from 'redux-saga/effects'
+import axios from 'axios';
+import {takeEvery, all, put, call } from 'redux-saga/effects'
 import {DO_REQUEST  } from "../actions/actions";
 
 
+function getPosts() {
+    return axios({
+        method: 'get',
+        url: 'http://localhost:3001/db'
+    })
+    
+}
+
 function* fetchData() {
-    const response = yield fetch('https://ghibliapi.herokuapp.com/films');
-    const json = yield response.json();
-    console.log(json);
+    const response = yield call(getPosts);
+    // const json = yield response.json();
+    console.log(response.data);
     yield put({
         type: DO_REQUEST,
-        payload: json
+        payload: response
     })
 }
 
