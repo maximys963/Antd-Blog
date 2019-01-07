@@ -8,6 +8,7 @@ import createSagaMiddleware from 'redux-saga'
 import rootSaga from './sagas/fetchSaga'
 import './index.css';
 import App from './App';
+import List from './containers/List'
 import * as serviceWorker from './serviceWorker';
 import Post from './containers/Post'
 import {DO_REQUEST} from "./actions/actions";
@@ -33,12 +34,15 @@ sagaMiddleware.run(rootSaga);
 store.dispatch({type: 'START_REQUEST'});
 
 const Root = ({store}) => (
-    <Provider store={store}>
+    <Provider store={store} >
         <Router>
+            <div>
+            <App/>
             <Switch>
-         <Route exact path='/' component={App}/>
+         <Route exact path='/' component={List}/>
          <Route path='/posts/:postId' component={Post}/>
             </Switch>
+            </div>
         </Router>
     </Provider>
 );

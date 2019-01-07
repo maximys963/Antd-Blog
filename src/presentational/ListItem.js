@@ -24,6 +24,7 @@ const ListItem = (props) =>(
                 />
                 }
                  >
+                <p>Author: John Doe</p>
                 <Meta
                     title={props.text}
                     description="07/01/2019"

@@ -10,15 +10,12 @@ const Container = styled.div`
  flex-wrap: wrap;
  justify-content: center;
  align-items: center;
- 
 `;
 
 
 
 class List extends Component{
-    constructor(){
-        super()
-    }
+
     render(){
         return(
             <Container>
